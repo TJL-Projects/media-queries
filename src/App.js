@@ -24,14 +24,21 @@ class App extends Component{
     <div className="App">
       <nav>
         <div className='logo'>Start Bootstrap</div>
-        <div className='dropdown-menu'>
+        <div className='dropdown-menu-btn'>
           <button id='menu-btn' onClick={() => this.handleClick()}>MENU</button>
+        </div>
+        <div className='nav-links'>
+        <span className='link'>SERVICES</span>
+        <span className='link'>PORTFOLIO</span>
+        <span className='link'>ABOUT</span>
+        <span className='link'>TEAM</span>
+        <span className='link'>CONTACT</span>
         </div>
       </nav>
 
       <img className='background-img' src='https://blackrockdigital.github.io/startbootstrap-agency/assets/img/header-bg.jpg' alt='this' />
 
-      <div className={`dropdown-link ${this.state.menuToggle ? 'dropdown-menu-open' : null}`}>
+      <div className={`dropdown-links ${this.state.menuToggle ? 'dropdown-menu-open' : null}`}>
         <span>Services</span>
         <span>Portfolio</span>
         <span>About</span>
@@ -48,7 +55,13 @@ class App extends Component{
         </div>
       </div>
       <div className='services-container'>
-        <span>SERVICES</span>
+        <div className='services-title'>
+          <span id='service' className='service-tag'>SERVICES</span>
+          <span style={{fontStyle: 'italic', color: 'gray'}} className='service-tag'>Lorem ipsum dolor sit amet consectetur</span>
+        </div>
+        <div className='e-commerce'>
+            <img />
+        </div>
       </div>
     </div>
   );
